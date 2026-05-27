@@ -1,0 +1,1032 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 3
+        -greater_path 0.00
+        -max_paths 20
+Design : FFT64
+Version: U-2022.12
+Date   : Tue Jul 29 16:53:26 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: s4/m0/sub_ar_ai_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s4/m0/md_reg[21]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s4/m0/sub_ar_ai_reg[3]/CK (DFFHQX2)                     0.00 #     0.50 r
+  s4/m0/sub_ar_ai_reg[3]/Q (DFFHQX2)                      1.16       1.66 r
+  s4/m0/mult_62/a[3] (multiply_WIDTH12_0_DW_mult_tc_7)     0.00      1.66 r
+  s4/m0/mult_62/U408/Y (XNOR2X4)                          0.90       2.56 r
+  s4/m0/mult_62/U406/Y (NAND2X4)                          0.40       2.95 f
+  s4/m0/mult_62/U591/Y (OAI22X1)                          0.48       3.43 r
+  s4/m0/mult_62/U659/Y (XNOR2X1)                          0.53       3.96 r
+  s4/m0/mult_62/U657/ICO (CMPR42X1)                       0.34       4.29 r
+  s4/m0/mult_62/U661/ICO (CMPR42X1)                       0.34       4.63 r
+  s4/m0/mult_62/U665/S (CMPR42X1)                         1.00       5.63 f
+  s4/m0/mult_62/U702/Y (NOR2X1)                           0.62       6.25 r
+  s4/m0/mult_62/U463/Y (OAI21X2)                          0.22       6.47 f
+  s4/m0/mult_62/U464/Y (AOI21X2)                          0.23       6.70 r
+  s4/m0/mult_62/U468/Y (OAI21X2)                          0.18       6.88 f
+  s4/m0/mult_62/U430/Y (AOI21X2)                          0.36       7.24 r
+  s4/m0/mult_62/U470/Y (OAI21X4)                          0.12       7.35 f
+  s4/m0/mult_62/U449/Y (AOI22X1)                          0.29       7.64 r
+  s4/m0/mult_62/U737/Y (XOR2X1)                           0.32       7.96 f
+  s4/m0/mult_62/product[21] (multiply_WIDTH12_0_DW_mult_tc_7)     0.00     7.96 f
+  s4/m0/md_reg[21]/D (DFFHQX1)                            0.00       7.96 f
+  data arrival time                                                  7.96
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s4/m0/md_reg[21]/CK (DFFHQX1)                           0.00       8.30 r
+  library setup time                                     -0.33       7.97
+  data required time                                                 7.97
+  --------------------------------------------------------------------------
+  data required time                                                 7.97
+  data arrival time                                                 -7.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: x_re[0] (input port clocked by clk)
+  Endpoint: s1/b0/sub_re_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    4.80       5.30 f
+  x_re[0] (in)                                            0.00       5.30 f
+  s1/x_re[0] (sdfunit1_WIDTH12_DEPTH31)                   0.00       5.30 f
+  s1/b0/x1_re[0] (butterfly_WIDTH12)                      0.00       5.30 f
+  s1/b0/U4/Y (CLKINVX8)                                   0.11       5.41 r
+  s1/b0/add_0_root_add_21_ni/A[0] (butterfly_WIDTH12_DW01_inc_0_DW01_inc_26)     0.00     5.41 r
+  s1/b0/add_0_root_add_21_ni/U10/Y (NAND2X4)              0.09       5.50 f
+  s1/b0/add_0_root_add_21_ni/U9/Y (INVX8)                 0.07       5.58 r
+  s1/b0/add_0_root_add_21_ni/U13/Y (NAND2X4)              0.09       5.67 f
+  s1/b0/add_0_root_add_21_ni/U5/Y (NOR3BX4)               0.26       5.93 r
+  s1/b0/add_0_root_add_21_ni/U1_1_6/CO (ADDHX4)           0.22       6.15 r
+  s1/b0/add_0_root_add_21_ni/U1_1_7/CO (ADDHX4)           0.17       6.32 r
+  s1/b0/add_0_root_add_21_ni/U1_1_8/CO (ADDHX2)           0.21       6.53 r
+  s1/b0/add_0_root_add_21_ni/U1_1_9/CO (ADDHX2)           0.23       6.76 r
+  s1/b0/add_0_root_add_21_ni/U1_1_10/CO (ADDHX2)          0.24       6.99 r
+  s1/b0/add_0_root_add_21_ni/U14/Y (XOR2X4)               0.38       7.38 r
+  s1/b0/add_0_root_add_21_ni/SUM[11] (butterfly_WIDTH12_DW01_inc_0_DW01_inc_26)     0.00     7.38 r
+  s1/b0/c2/y[11] (carry_select_adder2_WIDTH12_21)         0.00       7.38 r
+  s1/b0/c2/U16/Y (XNOR3X4)                                0.38       7.76 f
+  s1/b0/c2/U15/Y (AOI2BB2X4)                              0.25       8.01 f
+  s1/b0/c2/U3/Y (INVXL)                                   0.20       8.20 r
+  s1/b0/c2/z[11] (carry_select_adder2_WIDTH12_21)         0.00       8.20 r
+  s1/b0/sub_re_reg[11]/D (DFFXL)                          0.00       8.20 r
+  data arrival time                                                  8.20
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s1/b0/sub_re_reg[11]/CK (DFFXL)                         0.00       8.30 r
+  library setup time                                     -0.10       8.20
+  data required time                                                 8.20
+  --------------------------------------------------------------------------
+  data required time                                                 8.20
+  data arrival time                                                 -8.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: s2/m0/sub_ar_ai_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s2/m0/md_reg[21]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s2/m0/sub_ar_ai_reg[9]/CK (DFFHQX4)                     0.00 #     0.50 r
+  s2/m0/sub_ar_ai_reg[9]/Q (DFFHQX4)                      0.68       1.18 r
+  s2/m0/mult_62/a[9] (multiply_WIDTH12_1_DW_mult_tc_7)     0.00      1.18 r
+  s2/m0/mult_62/U434/Y (XNOR2X2)                          1.09       2.26 r
+  s2/m0/mult_62/U690/Y (NAND2X2)                          0.69       2.96 f
+  s2/m0/mult_62/U611/Y (OAI22X1)                          0.41       3.37 r
+  s2/m0/mult_62/U609/CO (ADDHXL)                          0.43       3.80 r
+  s2/m0/mult_62/U490/ICO (CMPR42X2)                       0.29       4.09 r
+  s2/m0/mult_62/U440/ICO (CMPR42X1)                       0.32       4.41 r
+  s2/m0/mult_62/U484/S (CMPR42X1)                         1.00       5.41 f
+  s2/m0/mult_62/U443/Y (NOR2X1)                           0.58       5.99 r
+  s2/m0/mult_62/U488/Y (OAI21X2)                          0.19       6.18 f
+  s2/m0/mult_62/U450/Y (AOI21X1)                          0.32       6.50 r
+  s2/m0/mult_62/U483/Y (OAI21X2)                          0.21       6.71 f
+  s2/m0/mult_62/U487/Y (AOI21X2)                          0.31       7.02 r
+  s2/m0/mult_62/U456/Y (OAI21X2)                          0.19       7.22 f
+  s2/m0/mult_62/U445/Y (AOI21X2)                          0.22       7.43 r
+  s2/m0/mult_62/U476/Y (XOR3X2)                           0.53       7.96 f
+  s2/m0/mult_62/product[21] (multiply_WIDTH12_1_DW_mult_tc_7)     0.00     7.96 f
+  s2/m0/md_reg[21]/D (DFFHQX1)                            0.00       7.96 f
+  data arrival time                                                  7.96
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s2/m0/md_reg[21]/CK (DFFHQX1)                           0.00       8.30 r
+  library setup time                                     -0.34       7.96
+  data required time                                                 7.96
+  --------------------------------------------------------------------------
+  data required time                                                 7.96
+  data arrival time                                                 -7.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: x_re[0] (input port clocked by clk)
+  Endpoint: s1/b0/sub_re_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    4.80       5.30 f
+  x_re[0] (in)                                            0.00       5.30 f
+  s1/x_re[0] (sdfunit1_WIDTH12_DEPTH31)                   0.00       5.30 f
+  s1/b0/x1_re[0] (butterfly_WIDTH12)                      0.00       5.30 f
+  s1/b0/U4/Y (CLKINVX8)                                   0.11       5.41 r
+  s1/b0/add_0_root_add_21_ni/A[0] (butterfly_WIDTH12_DW01_inc_0_DW01_inc_26)     0.00     5.41 r
+  s1/b0/add_0_root_add_21_ni/U10/Y (NAND2X4)              0.09       5.50 f
+  s1/b0/add_0_root_add_21_ni/U9/Y (INVX8)                 0.07       5.58 r
+  s1/b0/add_0_root_add_21_ni/U13/Y (NAND2X4)              0.09       5.67 f
+  s1/b0/add_0_root_add_21_ni/U5/Y (NOR3BX4)               0.26       5.93 r
+  s1/b0/add_0_root_add_21_ni/U1_1_6/CO (ADDHX4)           0.22       6.15 r
+  s1/b0/add_0_root_add_21_ni/U1_1_7/CO (ADDHX4)           0.17       6.32 r
+  s1/b0/add_0_root_add_21_ni/U1_1_8/CO (ADDHX2)           0.21       6.53 r
+  s1/b0/add_0_root_add_21_ni/U1_1_9/CO (ADDHX2)           0.23       6.76 r
+  s1/b0/add_0_root_add_21_ni/U1_1_10/CO (ADDHX2)          0.24       6.99 r
+  s1/b0/add_0_root_add_21_ni/U14/Y (XOR2X4)               0.38       7.38 r
+  s1/b0/add_0_root_add_21_ni/SUM[11] (butterfly_WIDTH12_DW01_inc_0_DW01_inc_26)     0.00     7.38 r
+  s1/b0/c2/y[11] (carry_select_adder2_WIDTH12_21)         0.00       7.38 r
+  s1/b0/c2/U14/Y (XNOR3X4)                                0.40       7.77 f
+  s1/b0/c2/U15/Y (AOI2BB2X4)                              0.21       7.98 r
+  s1/b0/c2/U4/Y (AOI21X4)                                 0.07       8.04 f
+  s1/b0/c2/z[12] (carry_select_adder2_WIDTH12_21)         0.00       8.04 f
+  s1/b0/sub_re_reg[12]/D (DFFHQXL)                        0.00       8.04 f
+  data arrival time                                                  8.04
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s1/b0/sub_re_reg[12]/CK (DFFHQXL)                       0.00       8.30 r
+  library setup time                                     -0.25       8.05
+  data required time                                                 8.05
+  --------------------------------------------------------------------------
+  data required time                                                 8.05
+  data arrival time                                                 -8.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: x_im[1] (input port clocked by clk)
+  Endpoint: s1/b0/sub_im_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    4.80       5.30 r
+  x_im[1] (in)                                            0.00       5.30 r
+  s1/x_im[1] (sdfunit1_WIDTH12_DEPTH31)                   0.00       5.30 r
+  s1/b0/x1_im[1] (butterfly_WIDTH12)                      0.00       5.30 r
+  s1/b0/U15/Y (INVX8)                                     0.06       5.36 f
+  s1/b0/add_0_root_add_22_ni/A[1] (butterfly_WIDTH12_DW01_inc_1_DW01_inc_27)     0.00     5.36 f
+  s1/b0/add_0_root_add_22_ni/U12/Y (NAND2X4)              0.13       5.49 r
+  s1/b0/add_0_root_add_22_ni/U11/Y (INVX8)                0.05       5.54 f
+  s1/b0/add_0_root_add_22_ni/U5/Y (AND2X4)                0.17       5.71 f
+  s1/b0/add_0_root_add_22_ni/U6/Y (NOR2BX4)               0.18       5.89 f
+  s1/b0/add_0_root_add_22_ni/U8/Y (NAND2X4)               0.13       6.02 r
+  s1/b0/add_0_root_add_22_ni/U14/Y (CLKINVX8)             0.07       6.10 f
+  s1/b0/add_0_root_add_22_ni/U1_1_6/CO (ADDHX4)           0.18       6.28 f
+  s1/b0/add_0_root_add_22_ni/U1_1_7/S (ADDHX4)            0.16       6.44 f
+  s1/b0/add_0_root_add_22_ni/SUM[7] (butterfly_WIDTH12_DW01_inc_1_DW01_inc_27)     0.00     6.44 f
+  s1/b0/c3/y[7] (carry_select_adder2_WIDTH12_20)          0.00       6.44 f
+  s1/b0/c3/add_1_root_add_28_2/U1_1/CO (ADDFHX2)          0.36       6.80 f
+  s1/b0/c3/add_1_root_add_28_2/U1_2/CO (ADDFHX2)          0.26       7.07 f
+  s1/b0/c3/add_1_root_add_28_2/U1_3/CO (ADDFHX2)          0.26       7.33 f
+  s1/b0/c3/add_1_root_add_28_2/U1_4/CO (ADDFHX2)          0.27       7.60 f
+  s1/b0/c3/U13/Y (XNOR3X4)                                0.24       7.84 f
+  s1/b0/c3/U15/Y (AOI2BB2X4)                              0.22       8.06 r
+  s1/b0/c3/U11/Y (AOI2BB1X4)                              0.08       8.14 f
+  s1/b0/c3/z[12] (carry_select_adder2_WIDTH12_20)         0.00       8.14 f
+  s1/b0/sub_im_reg[12]/D (DFFXL)                          0.00       8.14 f
+  data arrival time                                                  8.14
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s1/b0/sub_im_reg[12]/CK (DFFXL)                         0.00       8.30 r
+  library setup time                                     -0.16       8.14
+  data required time                                                 8.14
+  --------------------------------------------------------------------------
+  data required time                                                 8.14
+  data arrival time                                                 -8.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: s4/m0/add_br_bi_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s4/m0/mb_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s4/m0/add_br_bi_reg[9]/CK (DFFHQX4)                     0.00 #     0.50 r
+  s4/m0/add_br_bi_reg[9]/Q (DFFHQX4)                      0.68       1.18 r
+  s4/m0/mult_64/a[9] (multiply_WIDTH12_0_DW_mult_tc_11)     0.00     1.18 r
+  s4/m0/mult_64/U695/Y (XNOR2X2)                          1.09       2.26 r
+  s4/m0/mult_64/U696/Y (NAND2X2)                          0.69       2.96 f
+  s4/m0/mult_64/U615/Y (OAI22X1)                          0.44       3.40 r
+  s4/m0/mult_64/U613/ICO (CMPR42X1)                       0.40       3.79 r
+  s4/m0/mult_64/U623/CO (CMPR42X1)                        0.77       4.56 r
+  s4/m0/mult_64/U458/S (CMPR42X1)                         0.98       5.54 r
+  s4/m0/mult_64/U461/Y (NAND2X1)                          0.32       5.86 f
+  s4/m0/mult_64/U465/Y (OAI21XL)                          0.69       6.55 r
+  s4/m0/mult_64/U505/Y (AOI21X2)                          0.20       6.76 f
+  s4/m0/mult_64/U508/Y (OAI21X2)                          0.21       6.97 r
+  s4/m0/mult_64/U472/Y (AOI21X2)                          0.24       7.21 f
+  s4/m0/mult_64/U510/Y (OAI21X4)                          0.22       7.43 r
+  s4/m0/mult_64/U483/Y (XOR3X2)                           0.53       7.96 f
+  s4/m0/mult_64/product[20] (multiply_WIDTH12_0_DW_mult_tc_11)     0.00     7.96 f
+  s4/m0/mb_reg[20]/D (DFFHQX1)                            0.00       7.96 f
+  data arrival time                                                  7.96
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s4/m0/mb_reg[20]/CK (DFFHQX1)                           0.00       8.30 r
+  library setup time                                     -0.34       7.96
+  data required time                                                 7.96
+  --------------------------------------------------------------------------
+  data required time                                                 7.96
+  data arrival time                                                 -7.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: x_im[1] (input port clocked by clk)
+  Endpoint: s1/b0/sub_im_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    4.80       5.30 f
+  x_im[1] (in)                                            0.00       5.30 f
+  s1/x_im[1] (sdfunit1_WIDTH12_DEPTH31)                   0.00       5.30 f
+  s1/b0/x1_im[1] (butterfly_WIDTH12)                      0.00       5.30 f
+  s1/b0/U15/Y (INVX8)                                     0.10       5.40 r
+  s1/b0/add_0_root_add_22_ni/A[1] (butterfly_WIDTH12_DW01_inc_1_DW01_inc_27)     0.00     5.40 r
+  s1/b0/add_0_root_add_22_ni/U12/Y (NAND2X4)              0.09       5.49 f
+  s1/b0/add_0_root_add_22_ni/U11/Y (INVX8)                0.08       5.57 r
+  s1/b0/add_0_root_add_22_ni/U5/Y (AND2X4)                0.14       5.71 r
+  s1/b0/add_0_root_add_22_ni/U6/Y (NOR2BX4)               0.21       5.93 r
+  s1/b0/add_0_root_add_22_ni/U8/Y (NAND2X4)               0.09       6.02 f
+  s1/b0/add_0_root_add_22_ni/U14/Y (CLKINVX8)             0.07       6.09 r
+  s1/b0/add_0_root_add_22_ni/U1_1_6/CO (ADDHX4)           0.18       6.26 r
+  s1/b0/add_0_root_add_22_ni/U1_1_7/S (ADDHX4)            0.18       6.44 f
+  s1/b0/add_0_root_add_22_ni/SUM[7] (butterfly_WIDTH12_DW01_inc_1_DW01_inc_27)     0.00     6.44 f
+  s1/b0/c3/y[7] (carry_select_adder2_WIDTH12_20)          0.00       6.44 f
+  s1/b0/c3/add_1_root_add_28_2/U1_1/CO (ADDFHX2)          0.36       6.80 f
+  s1/b0/c3/add_1_root_add_28_2/U1_2/CO (ADDFHX2)          0.26       7.07 f
+  s1/b0/c3/add_1_root_add_28_2/U1_3/CO (ADDFHX2)          0.26       7.33 f
+  s1/b0/c3/add_1_root_add_28_2/U1_4/CO (ADDFHX2)          0.27       7.60 f
+  s1/b0/c3/U13/Y (XNOR3X4)                                0.24       7.84 f
+  s1/b0/c3/U15/Y (AOI2BB2X4)                              0.22       8.06 r
+  s1/b0/c3/U11/Y (AOI2BB1X4)                              0.08       8.14 f
+  s1/b0/c3/z[12] (carry_select_adder2_WIDTH12_20)         0.00       8.14 f
+  s1/b0/sub_im_reg[12]/D (DFFXL)                          0.00       8.14 f
+  data arrival time                                                  8.14
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s1/b0/sub_im_reg[12]/CK (DFFXL)                         0.00       8.30 r
+  library setup time                                     -0.16       8.14
+  data required time                                                 8.14
+  --------------------------------------------------------------------------
+  data required time                                                 8.14
+  data arrival time                                                 -8.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: s4/m0/sub_br_bi_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s4/m0/ma_reg[21]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s4/m0/sub_br_bi_reg[5]/CK (DFFHQX4)                     0.00 #     0.50 r
+  s4/m0/sub_br_bi_reg[5]/Q (DFFHQX4)                      0.68       1.18 r
+  s4/m0/mult_63/a[5] (multiply_WIDTH12_0_DW_mult_tc_9)     0.00      1.18 r
+  s4/m0/mult_63/U640/Y (XNOR2X2)                          1.12       2.30 r
+  s4/m0/mult_63/U641/Y (NAND2X2)                          0.74       3.04 f
+  s4/m0/mult_63/U606/Y (OAI22X1)                          0.45       3.49 r
+  s4/m0/mult_63/U603/ICO (CMPR42X1)                       0.37       3.86 r
+  s4/m0/mult_63/U613/CO (CMPR42X1)                        0.77       4.63 r
+  s4/m0/mult_63/U429/S (CMPR42X1)                         0.96       5.59 r
+  s4/m0/mult_63/U432/Y (NAND2X1)                          0.31       5.90 f
+  s4/m0/mult_63/U431/Y (OAI21X1)                          0.54       6.44 r
+  s4/m0/mult_63/U489/Y (AOI21X2)                          0.22       6.66 f
+  s4/m0/mult_63/U484/Y (OAI21X4)                          0.16       6.82 r
+  s4/m0/mult_63/U469/Y (AOI21X4)                          0.13       6.95 f
+  s4/m0/mult_63/U445/Y (OAI21X2)                          0.38       7.32 r
+  s4/m0/mult_63/U491/Y (AOI21X4)                          0.13       7.45 f
+  s4/m0/mult_63/U462/Y (XOR3X2)                           0.51       7.96 f
+  s4/m0/mult_63/product[21] (multiply_WIDTH12_0_DW_mult_tc_9)     0.00     7.96 f
+  s4/m0/ma_reg[21]/D (DFFHQX1)                            0.00       7.96 f
+  data arrival time                                                  7.96
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s4/m0/ma_reg[21]/CK (DFFHQX1)                           0.00       8.30 r
+  library setup time                                     -0.34       7.96
+  data required time                                                 7.96
+  --------------------------------------------------------------------------
+  data required time                                                 7.96
+  data arrival time                                                 -7.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: s2/m0/sub_ar_ai_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s2/m0/md_reg[21]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s2/m0/sub_ar_ai_reg[9]/CK (DFFHQX4)                     0.00 #     0.50 r
+  s2/m0/sub_ar_ai_reg[9]/Q (DFFHQX4)                      0.68       1.18 r
+  s2/m0/mult_62/a[9] (multiply_WIDTH12_1_DW_mult_tc_7)     0.00      1.18 r
+  s2/m0/mult_62/U434/Y (XNOR2X2)                          1.09       2.26 r
+  s2/m0/mult_62/U690/Y (NAND2X2)                          0.69       2.96 f
+  s2/m0/mult_62/U611/Y (OAI22X1)                          0.41       3.37 r
+  s2/m0/mult_62/U609/CO (ADDHXL)                          0.43       3.80 r
+  s2/m0/mult_62/U490/ICO (CMPR42X2)                       0.29       4.09 r
+  s2/m0/mult_62/U440/ICO (CMPR42X1)                       0.32       4.41 r
+  s2/m0/mult_62/U484/S (CMPR42X1)                         1.00       5.41 f
+  s2/m0/mult_62/U443/Y (NOR2X1)                           0.58       5.99 r
+  s2/m0/mult_62/U488/Y (OAI21X2)                          0.19       6.18 f
+  s2/m0/mult_62/U450/Y (AOI21X1)                          0.32       6.50 r
+  s2/m0/mult_62/U483/Y (OAI21X2)                          0.21       6.71 f
+  s2/m0/mult_62/U487/Y (AOI21X2)                          0.31       7.02 r
+  s2/m0/mult_62/U456/Y (OAI21X2)                          0.19       7.22 f
+  s2/m0/mult_62/U445/Y (AOI21X2)                          0.22       7.43 r
+  s2/m0/mult_62/U476/Y (XOR3X2)                           0.53       7.96 f
+  s2/m0/mult_62/product[21] (multiply_WIDTH12_1_DW_mult_tc_7)     0.00     7.96 f
+  s2/m0/md_reg[21]/D (DFFHQX1)                            0.00       7.96 f
+  data arrival time                                                  7.96
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s2/m0/md_reg[21]/CK (DFFHQX1)                           0.00       8.30 r
+  library setup time                                     -0.34       7.96
+  data required time                                                 7.96
+  --------------------------------------------------------------------------
+  data required time                                                 7.96
+  data arrival time                                                 -7.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: s4/m0/add_br_bi_reg[0]/CK
+              (internal path startpoint clocked by clk)
+  Endpoint: s4/m0/mb_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    0.00       0.50 r
+  s4/m0/add_br_bi_reg[0]/CK (DFFHQX1)                     0.00 #     0.50 r
+  s4/m0/add_br_bi_reg[0]/Q (DFFHQX1)                      0.54       1.04 r
+  s4/m0/mult_64/a[0] (multiply_WIDTH12_0_DW_mult_tc_11)     0.00     1.04 r
+  s4/m0/mult_64/U598/Y (CLKINVX3)                         0.53       1.57 f
+  s4/m0/mult_64/U476/Y (NAND2X1)                          1.43       3.00 r
+  s4/m0/mult_64/U618/Y (OAI22X1)                          0.31       3.31 f
+  s4/m0/mult_64/U617/S (ADDHXL)                           0.51       3.81 r
+  s4/m0/mult_64/U669/ICO (CMPR42X1)                       0.37       4.18 r
+  s4/m0/mult_64/U623/CO (CMPR42X1)                        0.38       4.56 r
+  s4/m0/mult_64/U458/S (CMPR42X1)                         0.98       5.54 r
+  s4/m0/mult_64/U461/Y (NAND2X1)                          0.32       5.86 f
+  s4/m0/mult_64/U465/Y (OAI21XL)                          0.69       6.55 r
+  s4/m0/mult_64/U505/Y (AOI21X2)                          0.20       6.75 f
+  s4/m0/mult_64/U508/Y (OAI21X2)                          0.21       6.97 r
+  s4/m0/mult_64/U472/Y (AOI21X2)                          0.24       7.21 f
+  s4/m0/mult_64/U510/Y (OAI21X4)                          0.22       7.43 r
+  s4/m0/mult_64/U483/Y (XOR3X2)                           0.53       7.96 f
+  s4/m0/mult_64/product[20] (multiply_WIDTH12_0_DW_mult_tc_11)     0.00     7.96 f
+  s4/m0/mb_reg[20]/D (DFFHQX1)                            0.00       7.96 f
+  data arrival time                                                  7.96
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s4/m0/mb_reg[20]/CK (DFFHQX1)                           0.00       8.30 r
+  library setup time                                     -0.34       7.96
+  data required time                                                 7.96
+  --------------------------------------------------------------------------
+  data required time                                                 7.96
+  data arrival time                                                 -7.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: s4/m0/add_br_bi_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s4/m0/mb_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s4/m0/add_br_bi_reg[5]/CK (DFFHQX4)                     0.00 #     0.50 r
+  s4/m0/add_br_bi_reg[5]/Q (DFFHQX4)                      0.68       1.18 r
+  s4/m0/mult_64/a[5] (multiply_WIDTH12_0_DW_mult_tc_11)     0.00     1.18 r
+  s4/m0/mult_64/U650/Y (XNOR2X2)                          1.09       2.27 r
+  s4/m0/mult_64/U651/Y (NAND2X2)                          0.71       2.98 f
+  s4/m0/mult_64/U616/Y (OAI22X1)                          0.44       3.42 r
+  s4/m0/mult_64/U613/ICO (CMPR42X1)                       0.37       3.79 r
+  s4/m0/mult_64/U623/CO (CMPR42X1)                        0.77       4.56 r
+  s4/m0/mult_64/U458/S (CMPR42X1)                         0.98       5.54 r
+  s4/m0/mult_64/U461/Y (NAND2X1)                          0.32       5.86 f
+  s4/m0/mult_64/U465/Y (OAI21XL)                          0.69       6.55 r
+  s4/m0/mult_64/U505/Y (AOI21X2)                          0.20       6.75 f
+  s4/m0/mult_64/U508/Y (OAI21X2)                          0.21       6.97 r
+  s4/m0/mult_64/U472/Y (AOI21X2)                          0.24       7.21 f
+  s4/m0/mult_64/U510/Y (OAI21X4)                          0.22       7.43 r
+  s4/m0/mult_64/U483/Y (XOR3X2)                           0.53       7.96 f
+  s4/m0/mult_64/product[20] (multiply_WIDTH12_0_DW_mult_tc_11)     0.00     7.96 f
+  s4/m0/mb_reg[20]/D (DFFHQX1)                            0.00       7.96 f
+  data arrival time                                                  7.96
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s4/m0/mb_reg[20]/CK (DFFHQX1)                           0.00       8.30 r
+  library setup time                                     -0.34       7.96
+  data required time                                                 7.96
+  --------------------------------------------------------------------------
+  data required time                                                 7.96
+  data arrival time                                                 -7.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: x_im[0] (input port clocked by clk)
+  Endpoint: s1/b0/sub_im_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    4.80       5.30 f
+  x_im[0] (in)                                            0.00       5.30 f
+  s1/x_im[0] (sdfunit1_WIDTH12_DEPTH31)                   0.00       5.30 f
+  s1/b0/x1_im[0] (butterfly_WIDTH12)                      0.00       5.30 f
+  s1/b0/U16/Y (INVX8)                                     0.11       5.41 r
+  s1/b0/add_0_root_add_22_ni/A[0] (butterfly_WIDTH12_DW01_inc_1_DW01_inc_27)     0.00     5.41 r
+  s1/b0/add_0_root_add_22_ni/U12/Y (NAND2X4)              0.09       5.49 f
+  s1/b0/add_0_root_add_22_ni/U11/Y (INVX8)                0.08       5.57 r
+  s1/b0/add_0_root_add_22_ni/U5/Y (AND2X4)                0.14       5.71 r
+  s1/b0/add_0_root_add_22_ni/U6/Y (NOR2BX4)               0.21       5.92 r
+  s1/b0/add_0_root_add_22_ni/U8/Y (NAND2X4)               0.09       6.02 f
+  s1/b0/add_0_root_add_22_ni/U14/Y (CLKINVX8)             0.07       6.08 r
+  s1/b0/add_0_root_add_22_ni/U1_1_6/CO (ADDHX4)           0.18       6.26 r
+  s1/b0/add_0_root_add_22_ni/U1_1_7/S (ADDHX4)            0.18       6.44 f
+  s1/b0/add_0_root_add_22_ni/SUM[7] (butterfly_WIDTH12_DW01_inc_1_DW01_inc_27)     0.00     6.44 f
+  s1/b0/c3/y[7] (carry_select_adder2_WIDTH12_20)          0.00       6.44 f
+  s1/b0/c3/add_1_root_add_28_2/U1_1/CO (ADDFHX2)          0.36       6.80 f
+  s1/b0/c3/add_1_root_add_28_2/U1_2/CO (ADDFHX2)          0.26       7.07 f
+  s1/b0/c3/add_1_root_add_28_2/U1_3/CO (ADDFHX2)          0.26       7.33 f
+  s1/b0/c3/add_1_root_add_28_2/U1_4/CO (ADDFHX2)          0.27       7.60 f
+  s1/b0/c3/U13/Y (XNOR3X4)                                0.24       7.84 f
+  s1/b0/c3/U15/Y (AOI2BB2X4)                              0.22       8.06 r
+  s1/b0/c3/U11/Y (AOI2BB1X4)                              0.08       8.14 f
+  s1/b0/c3/z[12] (carry_select_adder2_WIDTH12_20)         0.00       8.14 f
+  s1/b0/sub_im_reg[12]/D (DFFXL)                          0.00       8.14 f
+  data arrival time                                                  8.14
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s1/b0/sub_im_reg[12]/CK (DFFXL)                         0.00       8.30 r
+  library setup time                                     -0.16       8.14
+  data required time                                                 8.14
+  --------------------------------------------------------------------------
+  data required time                                                 8.14
+  data arrival time                                                 -8.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: s2/m0/sub_br_bi_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s2/m0/ma_reg[21]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s2/m0/sub_br_bi_reg[9]/CK (DFFHQX4)                     0.00 #     0.50 r
+  s2/m0/sub_br_bi_reg[9]/Q (DFFHQX4)                      0.68       1.18 r
+  s2/m0/mult_63/a[9] (multiply_WIDTH12_1_DW_mult_tc_9)     0.00      1.18 r
+  s2/m0/mult_63/U693/Y (XNOR2X2)                          1.06       2.24 r
+  s2/m0/mult_63/U694/Y (NAND2X2)                          0.66       2.90 f
+  s2/m0/mult_63/U632/Y (OAI22X1)                          0.43       3.33 r
+  s2/m0/mult_63/U630/CO (CMPR42X1)                        1.07       4.41 f
+  s2/m0/mult_63/U437/S (CMPR42X1)                         0.91       5.32 f
+  s2/m0/mult_63/U438/Y (NOR2X1)                           0.52       5.84 r
+  s2/m0/mult_63/U477/Y (NOR2X1)                           0.28       6.12 f
+  s2/m0/mult_63/U447/Y (AOI21X1)                          0.43       6.55 r
+  s2/m0/mult_63/U479/Y (OAI21X4)                          0.17       6.72 f
+  s2/m0/mult_63/U489/Y (AOI21X4)                          0.21       6.93 r
+  s2/m0/mult_63/U450/Y (OAI21X2)                          0.16       7.09 f
+  s2/m0/mult_63/U739/Y (AOI21X1)                          0.31       7.40 r
+  s2/m0/mult_63/U470/Y (XOR3X2)                           0.56       7.96 f
+  s2/m0/mult_63/product[21] (multiply_WIDTH12_1_DW_mult_tc_9)     0.00     7.96 f
+  s2/m0/ma_reg[21]/D (DFFHQX1)                            0.00       7.96 f
+  data arrival time                                                  7.96
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s2/m0/ma_reg[21]/CK (DFFHQX1)                           0.00       8.30 r
+  library setup time                                     -0.34       7.96
+  data required time                                                 7.96
+  --------------------------------------------------------------------------
+  data required time                                                 7.96
+  data arrival time                                                 -7.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: x_re[1] (input port clocked by clk)
+  Endpoint: s1/b0/add_re_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    4.80       5.30 f
+  x_re[1] (in)                                            0.00       5.30 f
+  s1/x_re[1] (sdfunit1_WIDTH12_DEPTH31)                   0.00       5.30 f
+  s1/b0/x1_re[1] (butterfly_WIDTH12)                      0.00       5.30 f
+  s1/b0/U10/Y (INVX1)                                     0.19       5.49 r
+  s1/b0/U9/Y (INVX1)                                      0.13       5.61 f
+  s1/b0/c0/y[1] (carry_select_adder2_WIDTH12_23)          0.00       5.61 f
+  s1/b0/c0/add_27/U1_1/CO (ADDFX2)                        0.57       6.18 f
+  s1/b0/c0/add_27/U1_2/CO (ADDFX2)                        0.39       6.58 f
+  s1/b0/c0/add_27/U1_3/CO (ADDFX2)                        0.40       6.98 f
+  s1/b0/c0/add_27/U1_4/CO (ADDFHX4)                       0.28       7.26 f
+  s1/b0/c0/add_27/U1_5/CO (ADDFHX4)                       0.28       7.54 f
+  s1/b0/c0/U4/Y (CLKINVX8)                                0.09       7.63 r
+  s1/b0/c0/U5/Y (INVX3)                                   0.07       7.70 f
+  s1/b0/c0/U7/Y (AOI22X4)                                 0.22       7.92 r
+  s1/b0/c0/U17/Y (INVX1)                                  0.12       8.04 f
+  s1/b0/c0/z[11] (carry_select_adder2_WIDTH12_23)         0.00       8.04 f
+  s1/b0/add_re_reg[11]/D (DFFHQXL)                        0.00       8.04 f
+  data arrival time                                                  8.04
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s1/b0/add_re_reg[11]/CK (DFFHQXL)                       0.00       8.30 r
+  library setup time                                     -0.25       8.05
+  data required time                                                 8.05
+  --------------------------------------------------------------------------
+  data required time                                                 8.05
+  data arrival time                                                 -8.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: s2/m0/sub_ar_ai_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s2/m0/md_reg[21]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s2/m0/sub_ar_ai_reg[0]/CK (DFFHQX1)                     0.00 #     0.50 r
+  s2/m0/sub_ar_ai_reg[0]/Q (DFFHQX1)                      0.54       1.04 r
+  s2/m0/mult_62/a[0] (multiply_WIDTH12_1_DW_mult_tc_7)     0.00      1.04 r
+  s2/m0/mult_62/U591/Y (CLKINVX3)                         0.54       1.58 f
+  s2/m0/mult_62/U462/Y (NAND2X1)                          1.45       3.03 r
+  s2/m0/mult_62/U610/Y (OAI22X1)                          0.31       3.34 f
+  s2/m0/mult_62/U609/S (ADDHXL)                           0.51       3.85 r
+  s2/m0/mult_62/U664/ICO (CMPR42X1)                       0.37       4.22 r
+  s2/m0/mult_62/U615/CO (CMPR42X1)                        0.38       4.60 r
+  s2/m0/mult_62/U440/CO (CMPR42X1)                        0.86       5.46 r
+  s2/m0/mult_62/U443/Y (NOR2X1)                           0.30       5.76 f
+  s2/m0/mult_62/U675/Y (NOR2X1)                           0.41       6.17 r
+  s2/m0/mult_62/U441/Y (NAND2X1)                          0.23       6.40 f
+  s2/m0/mult_62/U483/Y (OAI21X2)                          0.33       6.73 r
+  s2/m0/mult_62/U487/Y (AOI21X2)                          0.22       6.94 f
+  s2/m0/mult_62/U456/Y (OAI21X2)                          0.34       7.29 r
+  s2/m0/mult_62/U445/Y (AOI21X2)                          0.16       7.44 f
+  s2/m0/mult_62/U476/Y (XOR3X2)                           0.51       7.96 f
+  s2/m0/mult_62/product[21] (multiply_WIDTH12_1_DW_mult_tc_7)     0.00     7.96 f
+  s2/m0/md_reg[21]/D (DFFHQX1)                            0.00       7.96 f
+  data arrival time                                                  7.96
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s2/m0/md_reg[21]/CK (DFFHQX1)                           0.00       8.30 r
+  library setup time                                     -0.34       7.96
+  data required time                                                 7.96
+  --------------------------------------------------------------------------
+  data required time                                                 7.96
+  data arrival time                                                 -7.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: s2/m0/sub_br_bi_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s2/m0/ma_reg[21]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s2/m0/sub_br_bi_reg[9]/CK (DFFHQX4)                     0.00 #     0.50 r
+  s2/m0/sub_br_bi_reg[9]/Q (DFFHQX4)                      0.68       1.18 r
+  s2/m0/mult_63/a[9] (multiply_WIDTH12_1_DW_mult_tc_9)     0.00      1.18 r
+  s2/m0/mult_63/U693/Y (XNOR2X2)                          1.06       2.24 r
+  s2/m0/mult_63/U694/Y (NAND2X2)                          0.66       2.90 f
+  s2/m0/mult_63/U632/Y (OAI22X1)                          0.43       3.33 r
+  s2/m0/mult_63/U630/CO (CMPR42X1)                        1.07       4.41 f
+  s2/m0/mult_63/U437/S (CMPR42X1)                         0.91       5.32 f
+  s2/m0/mult_63/U438/Y (NOR2X1)                           0.52       5.84 r
+  s2/m0/mult_63/U477/Y (NOR2X1)                           0.28       6.12 f
+  s2/m0/mult_63/U447/Y (AOI21X1)                          0.43       6.55 r
+  s2/m0/mult_63/U479/Y (OAI21X4)                          0.17       6.72 f
+  s2/m0/mult_63/U489/Y (AOI21X4)                          0.21       6.93 r
+  s2/m0/mult_63/U450/Y (OAI21X2)                          0.16       7.09 f
+  s2/m0/mult_63/U739/Y (AOI21X1)                          0.31       7.40 r
+  s2/m0/mult_63/U470/Y (XOR3X2)                           0.55       7.96 f
+  s2/m0/mult_63/product[21] (multiply_WIDTH12_1_DW_mult_tc_9)     0.00     7.96 f
+  s2/m0/ma_reg[21]/D (DFFHQX1)                            0.00       7.96 f
+  data arrival time                                                  7.96
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s2/m0/ma_reg[21]/CK (DFFHQX1)                           0.00       8.30 r
+  library setup time                                     -0.34       7.96
+  data required time                                                 7.96
+  --------------------------------------------------------------------------
+  data required time                                                 7.96
+  data arrival time                                                 -7.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: s4/m0/sub_br_bi_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s4/m0/ma_reg[21]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s4/m0/sub_br_bi_reg[5]/CK (DFFHQX4)                     0.00 #     0.50 r
+  s4/m0/sub_br_bi_reg[5]/Q (DFFHQX4)                      0.68       1.18 r
+  s4/m0/mult_63/a[5] (multiply_WIDTH12_0_DW_mult_tc_9)     0.00      1.18 r
+  s4/m0/mult_63/U640/Y (XNOR2X2)                          1.12       2.30 r
+  s4/m0/mult_63/U641/Y (NAND2X2)                          0.74       3.04 f
+  s4/m0/mult_63/U606/Y (OAI22X1)                          0.45       3.49 r
+  s4/m0/mult_63/U603/ICO (CMPR42X1)                       0.36       3.86 r
+  s4/m0/mult_63/U613/CO (CMPR42X1)                        0.77       4.62 r
+  s4/m0/mult_63/U429/S (CMPR42X1)                         0.96       5.58 r
+  s4/m0/mult_63/U432/Y (NAND2X1)                          0.31       5.90 f
+  s4/m0/mult_63/U431/Y (OAI21X1)                          0.54       6.43 r
+  s4/m0/mult_63/U489/Y (AOI21X2)                          0.22       6.65 f
+  s4/m0/mult_63/U484/Y (OAI21X4)                          0.16       6.81 r
+  s4/m0/mult_63/U469/Y (AOI21X4)                          0.13       6.94 f
+  s4/m0/mult_63/U445/Y (OAI21X2)                          0.38       7.32 r
+  s4/m0/mult_63/U491/Y (AOI21X4)                          0.13       7.45 f
+  s4/m0/mult_63/U462/Y (XOR3X2)                           0.51       7.96 f
+  s4/m0/mult_63/product[21] (multiply_WIDTH12_0_DW_mult_tc_9)     0.00     7.96 f
+  s4/m0/ma_reg[21]/D (DFFHQX1)                            0.00       7.96 f
+  data arrival time                                                  7.96
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s4/m0/ma_reg[21]/CK (DFFHQX1)                           0.00       8.30 r
+  library setup time                                     -0.34       7.96
+  data required time                                                 7.96
+  --------------------------------------------------------------------------
+  data required time                                                 7.96
+  data arrival time                                                 -7.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: x_im[1] (input port clocked by clk)
+  Endpoint: s1/b0/sub_im_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    4.80       5.30 r
+  x_im[1] (in)                                            0.00       5.30 r
+  s1/x_im[1] (sdfunit1_WIDTH12_DEPTH31)                   0.00       5.30 r
+  s1/b0/x1_im[1] (butterfly_WIDTH12)                      0.00       5.30 r
+  s1/b0/U15/Y (INVX8)                                     0.06       5.36 f
+  s1/b0/add_0_root_add_22_ni/A[1] (butterfly_WIDTH12_DW01_inc_1_DW01_inc_27)     0.00     5.36 f
+  s1/b0/add_0_root_add_22_ni/U12/Y (NAND2X4)              0.13       5.49 r
+  s1/b0/add_0_root_add_22_ni/U11/Y (INVX8)                0.05       5.54 f
+  s1/b0/add_0_root_add_22_ni/U5/Y (AND2X4)                0.17       5.71 f
+  s1/b0/add_0_root_add_22_ni/U6/Y (NOR2BX4)               0.18       5.89 f
+  s1/b0/add_0_root_add_22_ni/U8/Y (NAND2X4)               0.13       6.02 r
+  s1/b0/add_0_root_add_22_ni/U14/Y (CLKINVX8)             0.07       6.10 f
+  s1/b0/add_0_root_add_22_ni/U1_1_6/CO (ADDHX4)           0.18       6.28 f
+  s1/b0/add_0_root_add_22_ni/U1_1_7/S (ADDHX4)            0.16       6.44 f
+  s1/b0/add_0_root_add_22_ni/SUM[7] (butterfly_WIDTH12_DW01_inc_1_DW01_inc_27)     0.00     6.44 f
+  s1/b0/c3/y[7] (carry_select_adder2_WIDTH12_20)          0.00       6.44 f
+  s1/b0/c3/add_1_root_add_28_2/U1_1/CO (ADDFHX2)          0.36       6.80 f
+  s1/b0/c3/add_1_root_add_28_2/U1_2/CO (ADDFHX2)          0.26       7.07 f
+  s1/b0/c3/add_1_root_add_28_2/U1_3/CO (ADDFHX2)          0.26       7.33 f
+  s1/b0/c3/add_1_root_add_28_2/U1_4/CO (ADDFHX2)          0.27       7.60 f
+  s1/b0/c3/U13/Y (XNOR3X4)                                0.24       7.84 f
+  s1/b0/c3/U15/Y (AOI2BB2X4)                              0.22       8.06 r
+  s1/b0/c3/U12/Y (INVX2)                                  0.07       8.13 f
+  s1/b0/c3/z[11] (carry_select_adder2_WIDTH12_20)         0.00       8.13 f
+  s1/b0/sub_im_reg[11]/D (DFFXL)                          0.00       8.13 f
+  data arrival time                                                  8.13
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s1/b0/sub_im_reg[11]/CK (DFFXL)                         0.00       8.30 r
+  library setup time                                     -0.16       8.14
+  data required time                                                 8.14
+  --------------------------------------------------------------------------
+  data required time                                                 8.14
+  data arrival time                                                 -8.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: x_re[0] (input port clocked by clk)
+  Endpoint: s1/b0/sub_re_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    4.80       5.30 f
+  x_re[0] (in)                                            0.00       5.30 f
+  s1/x_re[0] (sdfunit1_WIDTH12_DEPTH31)                   0.00       5.30 f
+  s1/b0/x1_re[0] (butterfly_WIDTH12)                      0.00       5.30 f
+  s1/b0/U4/Y (CLKINVX8)                                   0.11       5.41 r
+  s1/b0/add_0_root_add_21_ni/A[0] (butterfly_WIDTH12_DW01_inc_0_DW01_inc_26)     0.00     5.41 r
+  s1/b0/add_0_root_add_21_ni/U10/Y (NAND2X4)              0.09       5.50 f
+  s1/b0/add_0_root_add_21_ni/U9/Y (INVX8)                 0.07       5.58 r
+  s1/b0/add_0_root_add_21_ni/U13/Y (NAND2X4)              0.09       5.67 f
+  s1/b0/add_0_root_add_21_ni/U5/Y (NOR3BX4)               0.26       5.93 r
+  s1/b0/add_0_root_add_21_ni/U1_1_6/CO (ADDHX4)           0.22       6.15 r
+  s1/b0/add_0_root_add_21_ni/U1_1_7/CO (ADDHX4)           0.17       6.32 r
+  s1/b0/add_0_root_add_21_ni/U1_1_8/CO (ADDHX2)           0.21       6.53 r
+  s1/b0/add_0_root_add_21_ni/U1_1_9/CO (ADDHX2)           0.23       6.76 r
+  s1/b0/add_0_root_add_21_ni/U1_1_10/CO (ADDHX2)          0.24       6.99 r
+  s1/b0/add_0_root_add_21_ni/U14/Y (XOR2X4)               0.38       7.38 r
+  s1/b0/add_0_root_add_21_ni/SUM[11] (butterfly_WIDTH12_DW01_inc_0_DW01_inc_26)     0.00     7.38 r
+  s1/b0/c2/y[11] (carry_select_adder2_WIDTH12_21)         0.00       7.38 r
+  s1/b0/c2/U14/Y (XNOR3X4)                                0.40       7.77 f
+  s1/b0/c2/U15/Y (AOI2BB2X4)                              0.21       7.98 r
+  s1/b0/c2/U3/Y (INVXL)                                   0.14       8.12 f
+  s1/b0/c2/z[11] (carry_select_adder2_WIDTH12_21)         0.00       8.12 f
+  s1/b0/sub_re_reg[11]/D (DFFXL)                          0.00       8.12 f
+  data arrival time                                                  8.12
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s1/b0/sub_re_reg[11]/CK (DFFXL)                         0.00       8.30 r
+  library setup time                                     -0.17       8.13
+  data required time                                                 8.13
+  --------------------------------------------------------------------------
+  data required time                                                 8.13
+  data arrival time                                                 -8.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: x_im[1] (input port clocked by clk)
+  Endpoint: s1/b0/sub_im_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    4.80       5.30 f
+  x_im[1] (in)                                            0.00       5.30 f
+  s1/x_im[1] (sdfunit1_WIDTH12_DEPTH31)                   0.00       5.30 f
+  s1/b0/x1_im[1] (butterfly_WIDTH12)                      0.00       5.30 f
+  s1/b0/U15/Y (INVX8)                                     0.10       5.40 r
+  s1/b0/add_0_root_add_22_ni/A[1] (butterfly_WIDTH12_DW01_inc_1_DW01_inc_27)     0.00     5.40 r
+  s1/b0/add_0_root_add_22_ni/U12/Y (NAND2X4)              0.09       5.49 f
+  s1/b0/add_0_root_add_22_ni/U11/Y (INVX8)                0.08       5.57 r
+  s1/b0/add_0_root_add_22_ni/U5/Y (AND2X4)                0.14       5.71 r
+  s1/b0/add_0_root_add_22_ni/U6/Y (NOR2BX4)               0.21       5.93 r
+  s1/b0/add_0_root_add_22_ni/U8/Y (NAND2X4)               0.09       6.02 f
+  s1/b0/add_0_root_add_22_ni/U14/Y (CLKINVX8)             0.07       6.09 r
+  s1/b0/add_0_root_add_22_ni/U1_1_6/CO (ADDHX4)           0.18       6.26 r
+  s1/b0/add_0_root_add_22_ni/U1_1_7/S (ADDHX4)            0.18       6.44 f
+  s1/b0/add_0_root_add_22_ni/SUM[7] (butterfly_WIDTH12_DW01_inc_1_DW01_inc_27)     0.00     6.44 f
+  s1/b0/c3/y[7] (carry_select_adder2_WIDTH12_20)          0.00       6.44 f
+  s1/b0/c3/add_1_root_add_28_2/U1_1/CO (ADDFHX2)          0.36       6.80 f
+  s1/b0/c3/add_1_root_add_28_2/U1_2/CO (ADDFHX2)          0.26       7.07 f
+  s1/b0/c3/add_1_root_add_28_2/U1_3/CO (ADDFHX2)          0.26       7.33 f
+  s1/b0/c3/add_1_root_add_28_2/U1_4/CO (ADDFHX2)          0.27       7.60 f
+  s1/b0/c3/U13/Y (XNOR3X4)                                0.24       7.84 f
+  s1/b0/c3/U15/Y (AOI2BB2X4)                              0.22       8.06 r
+  s1/b0/c3/U12/Y (INVX2)                                  0.07       8.13 f
+  s1/b0/c3/z[11] (carry_select_adder2_WIDTH12_20)         0.00       8.13 f
+  s1/b0/sub_im_reg[11]/D (DFFXL)                          0.00       8.13 f
+  data arrival time                                                  8.13
+
+  clock clk (rise edge)                                   8.00       8.00
+  clock network delay (ideal)                             0.50       8.50
+  clock uncertainty                                      -0.20       8.30
+  s1/b0/sub_im_reg[11]/CK (DFFXL)                         0.00       8.30 r
+  library setup time                                     -0.16       8.14
+  data required time                                                 8.14
+  --------------------------------------------------------------------------
+  data required time                                                 8.14
+  data arrival time                                                 -8.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

@@ -1,0 +1,712 @@
+Warning: Worst timing paths might not be returned. (TIM-104)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 3
+        -greater_path 0.00
+        -max_paths 20
+Design : FFT64
+Version: U-2022.12
+Date   : Tue Jul 29 16:53:26 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: fast   Library: fast
+Wire Load Model Mode: top
+
+  Startpoint: x_re[11] (input port clocked by clk)
+  Endpoint: s1/b0/add_re_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    0.00       0.50 f
+  x_re[11] (in)                                           0.00       0.50 f
+  s1/x_re[11] (sdfunit1_WIDTH12_DEPTH31)                  0.00       0.50 f
+  s1/b0/x1_re[11] (butterfly_WIDTH12)                     0.00       0.50 f
+  s1/b0/c0/y[11] (carry_select_adder2_WIDTH12_23)         0.00       0.50 f
+  s1/b0/c0/U3/Y (AOI2BB1X2)                               0.29       0.79 f
+  s1/b0/c0/z[12] (carry_select_adder2_WIDTH12_23)         0.00       0.79 f
+  s1/b0/add_re_reg[12]/D (DFFHQXL)                        0.00       0.79 f
+  data arrival time                                                  0.79
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/b0/add_re_reg[12]/CK (DFFHQXL)                       0.00       0.70 r
+  library hold time                                       0.01       0.71
+  data required time                                                 0.71
+  --------------------------------------------------------------------------
+  data required time                                                 0.71
+  data arrival time                                                 -0.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: x_re[11] (input port clocked by clk)
+  Endpoint: s1/b0/add_re_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    0.00       0.50 r
+  x_re[11] (in)                                           0.00       0.50 r
+  s1/x_re[11] (sdfunit1_WIDTH12_DEPTH31)                  0.00       0.50 r
+  s1/b0/x1_re[11] (butterfly_WIDTH12)                     0.00       0.50 r
+  s1/b0/c0/y[11] (carry_select_adder2_WIDTH12_23)         0.00       0.50 r
+  s1/b0/c0/U3/Y (AOI2BB1X2)                               0.24       0.74 r
+  s1/b0/c0/z[12] (carry_select_adder2_WIDTH12_23)         0.00       0.74 r
+  s1/b0/add_re_reg[12]/D (DFFHQXL)                        0.00       0.74 r
+  data arrival time                                                  0.74
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/b0/add_re_reg[12]/CK (DFFHQXL)                       0.00       0.70 r
+  library hold time                                      -0.06       0.64
+  data required time                                                 0.64
+  --------------------------------------------------------------------------
+  data required time                                                 0.64
+  data arrival time                                                 -0.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.09
+
+
+  Startpoint: x_im[11] (input port clocked by clk)
+  Endpoint: s1/b0/add_im_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    0.00       0.50 f
+  x_im[11] (in)                                           0.00       0.50 f
+  s1/x_im[11] (sdfunit1_WIDTH12_DEPTH31)                  0.00       0.50 f
+  s1/b0/x1_im[11] (butterfly_WIDTH12)                     0.00       0.50 f
+  s1/b0/c1/y[11] (carry_select_adder2_WIDTH12_22)         0.00       0.50 f
+  s1/b0/c1/U16/Y (AOI2BB1X1)                              0.37       0.87 f
+  s1/b0/c1/z[12] (carry_select_adder2_WIDTH12_22)         0.00       0.87 f
+  s1/b0/add_im_reg[12]/D (DFFHQXL)                        0.00       0.87 f
+  data arrival time                                                  0.87
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/b0/add_im_reg[12]/CK (DFFHQXL)                       0.00       0.70 r
+  library hold time                                       0.00       0.70
+  data required time                                                 0.70
+  --------------------------------------------------------------------------
+  data required time                                                 0.70
+  data arrival time                                                 -0.87
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.17
+
+
+  Startpoint: x_im[11] (input port clocked by clk)
+  Endpoint: s1/b0/add_im_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    0.00       0.50 r
+  x_im[11] (in)                                           0.00       0.50 r
+  s1/x_im[11] (sdfunit1_WIDTH12_DEPTH31)                  0.00       0.50 r
+  s1/b0/x1_im[11] (butterfly_WIDTH12)                     0.00       0.50 r
+  s1/b0/c1/y[11] (carry_select_adder2_WIDTH12_22)         0.00       0.50 r
+  s1/b0/c1/U16/Y (AOI2BB1X1)                              0.31       0.81 r
+  s1/b0/c1/z[12] (carry_select_adder2_WIDTH12_22)         0.00       0.81 r
+  s1/b0/add_im_reg[12]/D (DFFHQXL)                        0.00       0.81 r
+  data arrival time                                                  0.81
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/b0/add_im_reg[12]/CK (DFFHQXL)                       0.00       0.70 r
+  library hold time                                      -0.06       0.64
+  data required time                                                 0.64
+  --------------------------------------------------------------------------
+  data required time                                                 0.64
+  data arrival time                                                 -0.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[11]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[11]/CK (DFFHQX1)                           0.00 #     0.50 r
+  s1/dx_im_reg[11]/Q (DFFHQX1)                            0.33       0.83 f
+  s1/d0/x_im[11] (delaybuffer_WIDTH12_DEPTH31)            0.00       0.83 f
+  s1/d0/buf_im_reg[1][11]/D (DFFRHQX1)                    0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][11]/CK (DFFRHQX1)                   0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[10]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[10]/CK (DFFHQX1)                           0.00 #     0.50 r
+  s1/dx_im_reg[10]/Q (DFFHQX1)                            0.33       0.83 f
+  s1/d0/x_im[10] (delaybuffer_WIDTH12_DEPTH31)            0.00       0.83 f
+  s1/d0/buf_im_reg[1][10]/D (DFFRHQX1)                    0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][10]/CK (DFFRHQX1)                   0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[9]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_im_reg[9]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_im[9] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_im_reg[1][9]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][9]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[8]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_im_reg[8]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_im[8] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_im_reg[1][8]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][8]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[7]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_im_reg[7]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_im[7] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_im_reg[1][7]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][7]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[6]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_im_reg[6]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_im[6] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_im_reg[1][6]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][6]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[5]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_im_reg[5]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_im[5] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_im_reg[1][5]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][5]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[4]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_im_reg[4]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_im[4] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_im_reg[1][4]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][4]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[3]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_im_reg[3]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_im[3] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_im_reg[1][3]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][3]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[2]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_im_reg[2]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_im[2] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_im_reg[1][2]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][2]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[1]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_im_reg[1]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_im[1] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_im_reg[1][1]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][1]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_im_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_im_reg[1][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_im_reg[0]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_im_reg[0]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_im[0] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_im_reg[1][0]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_im_reg[1][0]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_re_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_re_reg[1][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_re_reg[3]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_re_reg[3]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_re[3] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_re_reg[1][3]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_re_reg[1][3]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_re_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_re_reg[1][2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_re_reg[2]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_re_reg[2]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_re[2] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_re_reg[1][2]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_re_reg[1][2]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_re_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_re_reg[1][1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_re_reg[1]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_re_reg[1]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_re[1] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_re_reg[1][1]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_re_reg[1][1]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: s1/dx_re_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s1/d0/buf_re_reg[1][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  s1/dx_re_reg[0]/CK (DFFHQX1)                            0.00 #     0.50 r
+  s1/dx_re_reg[0]/Q (DFFHQX1)                             0.33       0.83 f
+  s1/d0/x_re[0] (delaybuffer_WIDTH12_DEPTH31)             0.00       0.83 f
+  s1/d0/buf_re_reg[1][0]/D (DFFRHQX1)                     0.00       0.83 f
+  data arrival time                                                  0.83
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.20       0.70
+  s1/d0/buf_re_reg[1][0]/CK (DFFRHQX1)                    0.00       0.70 r
+  library hold time                                      -0.05       0.65
+  data required time                                                 0.65
+  --------------------------------------------------------------------------
+  data required time                                                 0.65
+  data arrival time                                                 -0.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+1

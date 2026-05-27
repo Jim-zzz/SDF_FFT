@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : reference
+Design : FFT64
+Version: U-2022.12
+Date   : Tue Jul 29 16:53:25 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sdfunit1_WIDTH12_DEPTH31      71640.677500       1  71640.677500  h, n
+sdfunit2_WIDTH12_DEPTH15      90431.511570       1  90431.511570  h, n
+sdfunit3_WIDTH12_DEPTH7       28683.547471       1  28683.547471  h, n
+sdfunit4_WIDTH12_DEPTH3       67146.711319       1  67146.711319  h, n
+sdfunit5_WIDTH12_DEPTH1       18434.908974       1  18434.908974  h, n
+sdfunit6_WIDTH12              14090.630531       1  14090.630531  h, n
+-----------------------------------------------------------------------------
+Total 6 references                                  290427.987364
+1

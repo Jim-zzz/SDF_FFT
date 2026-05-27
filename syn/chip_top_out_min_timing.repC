@@ -1,0 +1,1672 @@
+Warning: Worst timing paths might not be returned. (TIM-104)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 3
+        -greater_path 0.00
+        -max_paths 1000
+Design : FFT64
+Version: U-2022.12
+Date   : Tue Jul 29 16:53:26 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: fast   Library: fast
+Wire Load Model Mode: top
+
+  Startpoint: s6/mux2_re_reg[11]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[11] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[11]/CK (DFFHQX1)          0.00 #     0.50 r
+  s6/mux2_re_reg[11]/Q (DFFHQX1)           0.45       0.95 f
+  s6/U106/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[11] (sdfunit6_WIDTH12)           0.00       2.24 f
+  y_re[11] (out)                           0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_re_reg[10]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[10] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[10]/CK (DFFHQX1)          0.00 #     0.50 r
+  s6/mux2_re_reg[10]/Q (DFFHQX1)           0.45       0.95 f
+  s6/U124/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[10] (sdfunit6_WIDTH12)           0.00       2.24 f
+  y_re[10] (out)                           0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_re_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[9] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[9]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[9]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U125/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[9] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_re[9] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_re_reg[8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[8] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[8]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[8]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U126/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[8] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_re[8] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_re_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[7]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[7]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U127/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[7] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_re[7] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_re_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[6]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[6]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U128/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[6] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_re[6] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_re_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[5]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[5]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U129/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[5] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_re[5] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_re_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[4]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[4]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U130/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[4] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_re[4] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_re_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[3]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[3]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U131/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[3] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_re[3] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_re_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[2]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[2]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U132/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[2] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_re[2] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_re_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[1]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[1]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U133/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[1] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_re[1] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_re_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[0]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[0]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U134/Y (BUFX20)                       1.29       2.24 f
+  s6/y_re[0] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_re[0] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[11]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[11] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[11]/CK (DFFHQX1)          0.00 #     0.50 r
+  s6/mux2_im_reg[11]/Q (DFFHQX1)           0.45       0.95 f
+  s6/U135/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[11] (sdfunit6_WIDTH12)           0.00       2.24 f
+  y_im[11] (out)                           0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[10]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[10] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[10]/CK (DFFHQX1)          0.00 #     0.50 r
+  s6/mux2_im_reg[10]/Q (DFFHQX1)           0.45       0.95 f
+  s6/U136/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[10] (sdfunit6_WIDTH12)           0.00       2.24 f
+  y_im[10] (out)                           0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[9] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[9]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[9]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U137/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[9] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_im[9] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[8] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[8]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[8]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U138/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[8] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_im[8] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[7]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[7]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U139/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[7] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_im[7] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[6]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[6]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U140/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[6] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_im[6] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[5]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[5]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U141/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[5] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_im[5] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[4]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[4]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U142/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[4] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_im[4] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[3]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[3]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U143/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[3] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_im[3] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[2]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[2]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U144/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[2] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_im[2] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[1]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[1]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U145/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[1] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_im[1] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/mux2_im_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[0]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[0]/Q (DFFHQX1)            0.45       0.95 f
+  s6/U146/Y (BUFX20)                       1.29       2.24 f
+  s6/y_im[0] (sdfunit6_WIDTH12)            0.00       2.24 f
+  y_im[0] (out)                            0.00       2.24 f
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         6.34
+
+
+  Startpoint: s6/s0/do_en_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: do_en (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/s0/do_en_r_reg/CK (DFFRHQX1)          0.00 #     0.50 r
+  s6/s0/do_en_r_reg/Q (DFFRHQX1)           0.46       0.96 f
+  s6/s0/U3/Y (BUFX20)                      1.29       2.25 f
+  s6/s0/do_en (signal_control4)            0.00       2.25 f
+  s6/do_en (sdfunit6_WIDTH12)              0.00       2.25 f
+  do_en (out)                              0.00       2.25 f
+  data arrival time                                   2.25
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -2.25
+  -----------------------------------------------------------
+  slack (MET)                                         6.35
+
+
+  Startpoint: s6/mux2_re_reg[11]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[11] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[11]/CK (DFFHQX1)          0.00 #     0.50 r
+  s6/mux2_re_reg[11]/Q (DFFHQX1)           0.55       1.05 r
+  s6/U106/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[11] (sdfunit6_WIDTH12)           0.00       3.12 r
+  y_re[11] (out)                           0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_re_reg[10]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[10] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[10]/CK (DFFHQX1)          0.00 #     0.50 r
+  s6/mux2_re_reg[10]/Q (DFFHQX1)           0.55       1.05 r
+  s6/U124/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[10] (sdfunit6_WIDTH12)           0.00       3.12 r
+  y_re[10] (out)                           0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_re_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[9] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[9]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[9]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U125/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[9] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_re[9] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_re_reg[8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[8] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[8]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[8]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U126/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[8] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_re[8] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_re_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[7]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[7]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U127/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[7] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_re[7] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_re_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[6]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[6]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U128/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[6] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_re[6] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_re_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[5]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[5]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U129/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[5] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_re[5] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_re_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[4]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[4]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U130/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[4] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_re[4] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_re_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[3]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[3]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U131/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[3] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_re[3] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_re_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[2]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[2]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U132/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[2] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_re[2] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_re_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[1]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[1]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U133/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[1] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_re[1] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_re_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_re[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_re_reg[0]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_re_reg[0]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U134/Y (BUFX20)                       2.07       3.12 r
+  s6/y_re[0] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_re[0] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[11]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[11] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[11]/CK (DFFHQX1)          0.00 #     0.50 r
+  s6/mux2_im_reg[11]/Q (DFFHQX1)           0.55       1.05 r
+  s6/U135/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[11] (sdfunit6_WIDTH12)           0.00       3.12 r
+  y_im[11] (out)                           0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[10]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[10] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[10]/CK (DFFHQX1)          0.00 #     0.50 r
+  s6/mux2_im_reg[10]/Q (DFFHQX1)           0.55       1.05 r
+  s6/U136/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[10] (sdfunit6_WIDTH12)           0.00       3.12 r
+  y_im[10] (out)                           0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[9] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[9]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[9]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U137/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[9] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_im[9] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[8] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[8]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[8]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U138/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[8] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_im[8] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[7]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[7]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U139/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[7] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_im[7] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[6]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[6]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U140/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[6] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_im[6] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[5]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[5]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U141/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[5] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_im[5] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[4]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[4]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U142/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[4] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_im[4] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[3]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[3]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U143/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[3] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_im[3] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[2]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[2]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U144/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[2] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_im[2] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[1]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[1]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U145/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[1] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_im[1] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/mux2_im_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_im[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/mux2_im_reg[0]/CK (DFFHQX1)           0.00 #     0.50 r
+  s6/mux2_im_reg[0]/Q (DFFHQX1)            0.55       1.05 r
+  s6/U146/Y (BUFX20)                       2.07       3.12 r
+  s6/y_im[0] (sdfunit6_WIDTH12)            0.00       3.12 r
+  y_im[0] (out)                            0.00       3.12 r
+  data arrival time                                   3.12
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.12
+  -----------------------------------------------------------
+  slack (MET)                                         7.22
+
+
+  Startpoint: s6/s0/do_en_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: do_en (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT64              tsmc18_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  s6/s0/do_en_r_reg/CK (DFFRHQX1)          0.00 #     0.50 r
+  s6/s0/do_en_r_reg/Q (DFFRHQX1)           0.71       1.21 r
+  s6/s0/U3/Y (BUFX20)                      2.09       3.31 r
+  s6/s0/do_en (signal_control4)            0.00       3.31 r
+  s6/do_en (sdfunit6_WIDTH12)              0.00       3.31 r
+  do_en (out)                              0.00       3.31 r
+  data arrival time                                   3.31
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.20       0.70
+  output external delay                   -4.80      -4.10
+  data required time                                 -4.10
+  -----------------------------------------------------------
+  data required time                                 -4.10
+  data arrival time                                  -3.31
+  -----------------------------------------------------------
+  slack (MET)                                         7.41
+
+
+1

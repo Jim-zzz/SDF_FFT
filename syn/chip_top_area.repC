@@ -1,0 +1,166 @@
+ 
+****************************************
+Report : area
+Design : FFT64
+Version: U-2022.12
+Date   : Tue Jul 29 16:53:25 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /T18/CBDK_TSMC018_Arm_f1.0/CIC/SynopsysDC/db/slow.db)
+
+Number of ports:                         3543
+Number of nets:                         11743
+Number of cells:                         7504
+Number of combinational cells:           4703
+Number of sequential cells:              2694
+Number of macros/black boxes:               0
+Number of buf/inv:                        943
+Number of references:                       6
+
+Combinational area:             123519.212801
+Buf/Inv area:                     7780.449707
+Noncombinational area:          166908.774563
+Macro/Black Box area:                0.000000
+Net Interconnect area:          861564.531799
+
+Total cell area:                290427.987364
+Total area:                    1151992.519164
+1
+ 
+****************************************
+Report : area
+Design : FFT64
+Version: U-2022.12
+Date   : Tue Jul 29 16:53:25 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /T18/CBDK_TSMC018_Arm_f1.0/CIC/SynopsysDC/db/slow.db)
+
+Number of ports:                         3543
+Number of nets:                         11743
+Number of cells:                         7504
+Number of combinational cells:           4703
+Number of sequential cells:              2694
+Number of macros/black boxes:               0
+Number of buf/inv:                        943
+Number of references:                       6
+
+Combinational area:             123519.212801
+Buf/Inv area:                     7780.449707
+Noncombinational area:          166908.774563
+Macro/Black Box area:                0.000000
+Net Interconnect area:          861564.531799
+
+Total cell area:                290427.987364
+Total area:                    1151992.519164
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes   Design
+--------------------------------  -----------  -------  -----------  -----------  ------  -----------------------------------------------
+FFT64                             290427.9874    100.0       0.0000       0.0000  0.0000  FFT64
+s1                                 71640.6775     24.7    1693.1376    5149.2673  0.0000  sdfunit1_WIDTH12_DEPTH31
+s1/add_91                            399.1680      0.1     399.1680       0.0000  0.0000  sdfunit1_WIDTH12_DEPTH31_DW01_inc_0_DW01_inc_13
+s1/b0                              11206.6417      3.9     325.9872    2564.6544  0.0000  butterfly_WIDTH12
+s1/b0/add_0_root_add_21_ni           715.1760      0.2     715.1760       0.0000  0.0000  butterfly_WIDTH12_DW01_inc_0_DW01_inc_26
+s1/b0/add_0_root_add_22_ni           821.6208      0.3     821.6208       0.0000  0.0000  butterfly_WIDTH12_DW01_inc_1_DW01_inc_27
+s1/b0/c0                            1490.2272      0.5    1490.2272       0.0000  0.0000  carry_select_adder2_WIDTH12_23
+s1/b0/c1                            1370.4768      0.5    1370.4768       0.0000  0.0000  carry_select_adder2_WIDTH12_22
+s1/b0/c2                            1922.6592      0.7    1922.6592       0.0000  0.0000  carry_select_adder2_WIDTH12_21
+s1/b0/c3                            1995.8400      0.7    1995.8400       0.0000  0.0000  carry_select_adder2_WIDTH12_20
+s1/d0                              51818.6597     17.8     246.1536   51572.5061  0.0000  delaybuffer_WIDTH12_DEPTH31
+s1/f0                               1373.8032      0.5     369.2304     788.3568  0.0000  FSM
+s1/f0/add_27                         216.2160      0.1     216.2160       0.0000  0.0000  FSM_DW01_inc_0_DW01_inc_14
+s2                                 90431.5116     31.1    2993.7600   11382.9409  0.0000  sdfunit2_WIDTH12_DEPTH15
+s2/add_132                           216.2160      0.1     216.2160       0.0000  0.0000  sdfunit2_WIDTH12_DEPTH15_DW01_inc_0_DW01_inc_11
+s2/b0                               6160.4928      2.1     159.6672       0.0000  0.0000  butterfly2_WIDTH12_4
+s2/b0/add_0_root_add_21_ni           399.1680      0.1     399.1680       0.0000  0.0000  butterfly2_WIDTH12_4_DW01_inc_1_DW01_inc_25
+s2/b0/add_0_root_add_22_ni           399.1680      0.1     399.1680       0.0000  0.0000  butterfly2_WIDTH12_4_DW01_inc_0_DW01_inc_24
+s2/b0/c0                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_19
+s2/b0/c1                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_18
+s2/b0/c2                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_17
+s2/b0/c3                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_16
+s2/d0                              24914.7362      8.6     166.3200   24748.4162  0.0000  delaybuffer_WIDTH12_DEPTH15
+s2/f0                               1420.3728      0.5     445.7376     758.4192  0.0000  FSM2
+s2/f0/add_36                         216.2160      0.1     216.2160       0.0000  0.0000  FSM2_DW01_inc_0_DW01_inc_12
+s2/m0                              39787.0710     13.7     159.6672    9240.7393  0.0000  multiply_WIDTH12_1
+s2/m0/add_45                         399.1680      0.1     399.1680       0.0000  0.0000  multiply_WIDTH12_1_DW01_inc_0_DW01_inc_29
+s2/m0/add_45_2                       798.3360      0.3     798.3360       0.0000  0.0000  multiply_WIDTH12_1_DW01_add_3_DW01_add_79
+s2/m0/add_46                         399.1680      0.1     399.1680       0.0000  0.0000  multiply_WIDTH12_1_DW01_inc_1_DW01_inc_31
+s2/m0/add_46_2                       798.3360      0.3     798.3360       0.0000  0.0000  multiply_WIDTH12_1_DW01_add_4_DW01_add_81
+s2/m0/add_47                         798.3360      0.3     798.3360       0.0000  0.0000  multiply_WIDTH12_1_DW01_add_2_DW01_add_53
+s2/m0/add_76                         798.3360      0.3     798.3360       0.0000  0.0000  multiply_WIDTH12_1_DW01_add_1_DW01_add_52
+s2/m0/add_77                         798.3360      0.3     798.3360       0.0000  0.0000  multiply_WIDTH12_1_DW01_add_0_DW01_add_51
+s2/m0/mult_62                       8492.2994      2.9    8492.2994       0.0000  0.0000  multiply_WIDTH12_1_DW_mult_tc_7
+s2/m0/mult_63                       8528.8898      2.9    8528.8898       0.0000  0.0000  multiply_WIDTH12_1_DW_mult_tc_9
+s2/m0/mult_64                       8575.4594      3.0    8575.4594       0.0000  0.0000  multiply_WIDTH12_1_DW_mult_tc_11
+s2/t0                               3555.9217      1.2    2278.5840    1277.3376  0.0000  twiddle2
+s3                                 28683.5475      9.9    2012.4720    6426.6049  0.0000  sdfunit3_WIDTH12_DEPTH7
+s3/add_97                            399.1680      0.1     399.1680       0.0000  0.0000  sdfunit3_WIDTH12_DEPTH7_DW01_inc_0_DW01_inc_9
+s3/b0                               6160.4928      2.1     159.6672       0.0000  0.0000  butterfly2_WIDTH12_3
+s3/b0/add_0_root_add_21_ni           399.1680      0.1     399.1680       0.0000  0.0000  butterfly2_WIDTH12_3_DW01_inc_1_DW01_inc_23
+s3/b0/add_0_root_add_22_ni           399.1680      0.1     399.1680       0.0000  0.0000  butterfly2_WIDTH12_3_DW01_inc_0_DW01_inc_22
+s3/b0/c0                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_15
+s3/b0/c1                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_14
+s3/b0/c2                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_13
+s3/b0/c3                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_12
+s3/d0                              11416.2049      3.9      79.8336   11336.3713  0.0000  delaybuffer_WIDTH12_DEPTH7
+s3/s0                               2268.6048      0.8     908.1072    1144.2816  0.0000  signal_control
+s3/s0/add_49                         216.2160      0.1     216.2160       0.0000  0.0000  signal_control_DW01_inc_0_DW01_inc_10
+s4                                 67146.7113     23.1    2025.7776   10501.4449  0.0000  sdfunit4_WIDTH12_DEPTH3
+s4/b0                               6160.4928      2.1     159.6672       0.0000  0.0000  butterfly2_WIDTH12_2
+s4/b0/add_0_root_add_21_ni           399.1680      0.1     399.1680       0.0000  0.0000  butterfly2_WIDTH12_2_DW01_inc_1_DW01_inc_21
+s4/b0/add_0_root_add_22_ni           399.1680      0.1     399.1680       0.0000  0.0000  butterfly2_WIDTH12_2_DW01_inc_0_DW01_inc_20
+s4/b0/c0                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_11
+s4/b0/c1                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_10
+s4/b0/c2                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_9
+s4/b0/c3                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_8
+s4/d0                               4640.3280      1.6       9.9792    4630.3488  0.0000  delaybuffer_WIDTH12_DEPTH3
+s4/m0                              39634.0566     13.6     159.6672    9227.4337  0.0000  multiply_WIDTH12_0
+s4/m0/add_45                         399.1680      0.1     399.1680       0.0000  0.0000  multiply_WIDTH12_0_DW01_inc_0_DW01_inc_28
+s4/m0/add_45_2                       798.3360      0.3     798.3360       0.0000  0.0000  multiply_WIDTH12_0_DW01_add_3_DW01_add_78
+s4/m0/add_46                         399.1680      0.1     399.1680       0.0000  0.0000  multiply_WIDTH12_0_DW01_inc_1_DW01_inc_30
+s4/m0/add_46_2                       798.3360      0.3     798.3360       0.0000  0.0000  multiply_WIDTH12_0_DW01_add_4_DW01_add_80
+s4/m0/add_47                         798.3360      0.3     798.3360       0.0000  0.0000  multiply_WIDTH12_0_DW01_add_2_DW01_add_26
+s4/m0/add_76                         798.3360      0.3     798.3360       0.0000  0.0000  multiply_WIDTH12_0_DW01_add_1_DW01_add_25
+s4/m0/add_77                         798.3360      0.3     798.3360       0.0000  0.0000  multiply_WIDTH12_0_DW01_add_0_DW01_add_24
+s4/m0/mult_62                       8475.6674      2.9    8475.6674       0.0000  0.0000  multiply_WIDTH12_0_DW_mult_tc_7
+s4/m0/mult_63                       8535.5426      2.9    8535.5426       0.0000  0.0000  multiply_WIDTH12_0_DW_mult_tc_9
+s4/m0/mult_64                       8445.7298      2.9    8445.7298       0.0000  0.0000  multiply_WIDTH12_0_DW_mult_tc_11
+s4/s0                               2614.5504      0.9     977.9616    1420.3728  0.0000  signal_control2
+s4/s0/add_36                         216.2160      0.1     216.2160       0.0000  0.0000  signal_control2_DW01_inc_0_DW01_inc_8
+s4/t0                               1570.0608      0.5     399.1680    1170.8928  0.0000  twiddle3
+s5                                 18434.9090      6.3    2095.6320    6386.6881  0.0000  sdfunit5_WIDTH12_DEPTH1
+s5/add_0_root_add_102_ni             399.1680      0.1     399.1680       0.0000  0.0000  sdfunit5_WIDTH12_DEPTH1_DW01_inc_0_DW01_inc_15
+s5/b0                               6160.4928      2.1     159.6672       0.0000  0.0000  butterfly2_WIDTH12_1
+s5/b0/add_0_root_add_21_ni           399.1680      0.1     399.1680       0.0000  0.0000  butterfly2_WIDTH12_1_DW01_inc_1_DW01_inc_19
+s5/b0/add_0_root_add_22_ni           399.1680      0.1     399.1680       0.0000  0.0000  butterfly2_WIDTH12_1_DW01_inc_0_DW01_inc_18
+s5/b0/c0                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_7
+s5/b0/c1                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_6
+s5/b0/c2                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_5
+s5/b0/c3                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_4
+s5/d0                               1683.1584      0.6       6.6528    1676.5056  0.0000  delaybuffer2_WIDTH12
+s5/s0                               1709.7696      0.6     562.1616     931.3920  0.0000  signal_control3
+s5/s0/add_41                         216.2160      0.1     216.2160       0.0000  0.0000  signal_control3_DW01_inc_0_DW01_inc_7
+s6                                 14090.6305      4.9    2724.3216    3832.0128  0.0000  sdfunit6_WIDTH12
+s6/b0                               6160.4928      2.1     159.6672       0.0000  0.0000  butterfly2_WIDTH12_0
+s6/b0/add_0_root_add_21_ni           399.1680      0.1     399.1680       0.0000  0.0000  butterfly2_WIDTH12_0_DW01_inc_1_DW01_inc_17
+s6/b0/add_0_root_add_22_ni           399.1680      0.1     399.1680       0.0000  0.0000  butterfly2_WIDTH12_0_DW01_inc_0_DW01_inc_16
+s6/b0/c0                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_3
+s6/b0/c1                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_2
+s6/b0/c2                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_1
+s6/b0/c3                            1300.6224      0.4    1300.6224       0.0000  0.0000  carry_select_adder2_WIDTH12_0
+s6/s0                               1373.8032      0.5     415.8000     741.7872  0.0000  signal_control4
+s6/s0/add_35                         216.2160      0.1     216.2160       0.0000  0.0000  signal_control4_DW01_inc_0_DW01_inc_6
+--------------------------------  -----------  -------  -----------  -----------  ------  -----------------------------------------------
+Total                                                   123519.2128  166908.7746  0.0000
+
+1
